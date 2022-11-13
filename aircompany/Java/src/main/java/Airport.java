@@ -96,18 +96,33 @@ public class Airport {
         return experimentalPlanesWithoutClassification;
     }
 
-    public Collection<? extends Plane> sortByMaxDistance() {
-        planes.sort((Comparator<Plane>) (s1, s2) -> s1.getMaxFlightDistance()  - s2.getMaxFlightDistance());
+    public List<? extends Plane> sortByMaxDistance() {
+        Collections.sort(planes, new Comparator<Plane>() {
+            @Override
+            public int compare(Plane o1, Plane o2) {
+                return o1.getMaxFlightDistance() - o2.getMaxFlightDistance();
+            }
+        });
         return planes;
     }
 
-    public Collection<? extends Plane> sortByMaxSpeed() {
-        planes.sort((Comparator<Plane>) (s1, s2) -> s1.getMaxSpeed() - s2.getMaxSpeed());
+    public List<? extends Plane> sortByMaxSpeed() {
+        Collections.sort(planes, new Comparator<Plane>() {
+            @Override
+            public int compare(Plane o1, Plane o2) {
+                return o1.getMaxSpeed() - o2.getMaxSpeed();
+            }
+        });
         return planes;
     }
 
-    public Collection<? extends Plane> sortByMaxLoadCapacity() {
-        planes.sort((Comparator<Plane>) (s1, s2) -> s1.getMaxLoadCapacity() - s2.getMaxLoadCapacity());
+    public List<? extends Plane> sortByMaxLoadCapacity() {
+        Collections.sort(planes, new Comparator<Plane>() {
+            @Override
+            public int compare(Plane o1, Plane o2) {
+                return o1.getMaxLoadCapacity() - o2.getMaxLoadCapacity();
+            }
+        });
         return planes;
     }
 
