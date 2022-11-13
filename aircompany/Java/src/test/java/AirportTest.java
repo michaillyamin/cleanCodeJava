@@ -33,7 +33,6 @@ public class AirportTest {
     );
 
     private PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
-    private MilitaryPlane militaryPlane = new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, MilitaryType.TRANSPORT);
 
     @Test
     public void testGetTransportMilitaryPlanes() {
