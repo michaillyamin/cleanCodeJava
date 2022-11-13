@@ -38,7 +38,7 @@ public class AirportTest {
     public void testGetTransportMilitaryPlanes() {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
-        Assert.assertEquals(transportMilitaryPlanes, new MilitaryPlane("B-2 Spirit", 1030, 22000, 70000, MilitaryType.BOMBER));
+        Assert.assertEquals(transportMilitaryPlanes, new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, MilitaryType.TRANSPORT));
     }
 
     @Test
